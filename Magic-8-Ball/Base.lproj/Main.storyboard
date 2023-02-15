@@ -1,24 +1,92 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Magic_8_Ball" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="zcT-5h-Ffb">
+                                <rect key="frame" x="92" y="119" width="209" height="35.666666666666686"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ask Me Anything" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7T6-tN-6XJ">
+                                        <rect key="frame" x="0.0" y="0.0" width="209" height="35.666666666666664"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="26"/>
+                                        <color key="textColor" systemColor="secondarySystemGroupedBackgroundColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="1cm-6N-2tZ">
+                                <rect key="frame" x="44" y="289.66666666666663" width="305" height="273.66666666666663"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ujb-LB-tWW">
+                                        <rect key="frame" x="0.0" y="0.0" width="305" height="273.66666666666669"/>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="IWu-FF-sX1">
+                                <rect key="frame" x="92" y="748" width="209" height="40"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0lF-gf-cfh">
+                                        <rect key="frame" x="0.0" y="0.0" width="209" height="40"/>
+                                        <color key="backgroundColor" red="0.081912733614444733" green="0.76313477754592896" blue="0.42341327667236328" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <rect key="contentStretch" x="0.050000000000000003" y="0.0" width="1" height="1"/>
+                                        <size key="titleShadowOffset" width="7" height="7"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Ask Away" cornerStyle="medium">
+                                            <fontDescription key="titleFontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="20"/>
+                                            <directionalEdgeInsets key="contentInsets" top="0.0" leading="0.0" bottom="0.0" trailing="0.0"/>
+                                            <color key="baseForegroundColor" systemColor="secondarySystemGroupedBackgroundColor"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="askButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HHX-rJ-g2Q"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Ywy-MR-4q8"/>
+                                    <constraint firstAttribute="width" constant="20" id="pS7-KR-QIS"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.80571061372756958" green="0.94405061006546021" blue="0.7718614935874939" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="1cm-6N-2tZ" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" constant="-12" id="Bba-lZ-w6e"/>
+                            <constraint firstItem="IWu-FF-sX1" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Jkr-6f-9zg"/>
+                            <constraint firstItem="zcT-5h-Ffb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="60" id="ORg-fT-ngG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="IWu-FF-sX1" secondAttribute="bottom" constant="30" id="OjU-CY-Kca"/>
+                            <constraint firstItem="zcT-5h-Ffb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="UeB-IW-ngB"/>
+                            <constraint firstItem="1cm-6N-2tZ" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="gza-Vl-rbx"/>
+                            <constraint firstItem="IWu-FF-sX1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="oKX-m4-nVh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zcT-5h-Ffb" secondAttribute="trailing" constant="30" id="wDZ-ol-XQW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="IWu-FF-sX1" secondAttribute="trailing" constant="30" id="z6k-La-zCk"/>
+                            <constraint firstItem="zcT-5h-Ffb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="z8p-jr-flz"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="Ujb-LB-tWW" id="mrD-mG-lAt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="101.5267175572519" y="3.5211267605633805"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="secondarySystemGroupedBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
